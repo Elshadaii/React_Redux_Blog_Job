@@ -87,9 +87,9 @@ class Login extends Component {
 
     return (
       <div className="col-md-12">
-        <div className="card card-container">
+        <div className="card card-container shadow-lg">
           <img
-            src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+            src="https://leainstitution.org/wp-content/uploads/2020/09/VTECH-CODERS-DHARWAD-My_profile.png"
             alt="profile-img"
             className="profile-img-card"
           />
@@ -100,10 +100,10 @@ class Login extends Component {
             }}
           >
             <div className="form-group">
-              <label htmlFor="email"> Email </label>{" "}
+              <label htmlFor="email" className="pb-3"> Email </label>{" "}
               <Input
                 type="email"
-                className="form-control"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 name="email"
                 value={this.state.email}
                 onChange={this.onChangeEmail}
@@ -111,19 +111,19 @@ class Login extends Component {
               />{" "}
             </div>{" "}
             <div className="form-group">
-              <label htmlFor="password"> Password </label>{" "}
+              <label htmlFor="password" className="pb-3"> Password </label>{" "}
               <Input
                 type="password"
-                className="form-control"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 name="password"
                 value={this.state.password}
                 onChange={this.onChangePassword}
                 validations={[required]}
               />{" "}
             </div>{" "}
-            <div className="form-group">
+            <div className="form-group mb-5 mt-3">
               <button
-                className="btn btn-primary btn-block"
+                className=" mr-0 mt-3 p-2 text-primary border-solid border-2 border-primary rounded-md hover:bg-primary hover:text-white transition ease-out"
                 disabled={this.state.loading}
               >
                 {this.state.loading && (
@@ -132,6 +132,7 @@ class Login extends Component {
                 <span> Login </span>{" "}
               </button>{" "}
             </div>{" "}
+            Already have an account? sign in <a href='/register' className="text-primary">here</a>
             {message && (
               <div className="form-group">
                 <div className="alert alert-danger" role="alert">
@@ -147,11 +148,12 @@ class Login extends Component {
               }}
             />{" "}
           </Form>{" "}
+          
         </div>{" "}
       </div>
     );
   }
-  S;
+  
 }
 
 function mapStateToProps(state) {

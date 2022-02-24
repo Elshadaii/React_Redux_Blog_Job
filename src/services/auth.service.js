@@ -32,8 +32,8 @@ class AuthService {
         try {
 
             const data = {
-                name: name,
-                role: role,
+                name,
+                role,
                 phone_no,
                 email,
                 address,

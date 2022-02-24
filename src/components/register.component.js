@@ -175,7 +175,7 @@ class Register extends Component {
 
     return (
       <div className="col-md-12">
-        <div className="card card-container">
+        <div className="card card-container shadow-lg">
           <img
             src="https://leainstitution.org/wp-content/uploads/2020/09/VTECH-CODERS-DHARWAD-My_profile.png"
             alt="profile-img"
@@ -190,11 +190,11 @@ class Register extends Component {
           >
             {!this.state.successful && (
               <div>
-                <div className="form-group">
-                  <label htmlFor="name">name</label>
+                <div className="form-group mb-2">
+                  <label htmlFor="name">Name</label>
                   <Input
                     type="text"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 font-asap bg-white  leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="name"
                     value={this.state.name}
                     onChange={this.onChangeName}
@@ -206,7 +206,7 @@ class Register extends Component {
                   <label htmlFor="email">Email</label>
                   <Input
                     type="text"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="email"
                     value={this.state.email}
                     onChange={this.onChangeEmail}
@@ -218,7 +218,7 @@ class Register extends Component {
                   <label htmlFor="password">Password</label>
                   <Input
                     type="password"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white  leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="password"
                     value={this.state.password}
                     onChange={this.onChangePassword}
@@ -232,7 +232,7 @@ class Register extends Component {
                   </label>
                   <Input
                     type="password"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="password"
                     value={this.state.password_confirmation}
                     onChange={this.onChangePasswordConfirmation}
@@ -243,7 +243,7 @@ class Register extends Component {
                   <label htmlFor="number">Phone no</label>
                   <Input
                     type="text"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white  leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="phone_no"
                     value={this.state.phone_no}
                     onChange={this.onChangePhoneNo}
@@ -253,7 +253,7 @@ class Register extends Component {
                   <label htmlFor="email">Address</label>
                   <Input
                     type="text"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="address"
                     value={this.state.address}
                     onChange={this.onChangeAddress}
@@ -263,7 +263,7 @@ class Register extends Component {
                   <label htmlFor="text">Role</label>
                   <Input
                     type="text"
-                    className="form-control"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline mt-2"
                     name="role"
                     value={this.state.role}
                     onChange={this.onChangeRole}
@@ -272,7 +272,11 @@ class Register extends Component {
                 </div>
 
                 <div className="form-group">
-                  <button className="btn btn-primary btn-block">Sign Up</button>
+                  <button className="mr-0 mt-3 p-2 text-primary border-solid border-2 border-primary rounded-md hover:bg-primary hover:text-white transition ease-out mt-5 mb-2">Sign Up</button>
+                  <div>
+                  Already have an Account? Login <a href="/login" className="text-primary">here</a>
+                  </div>
+                
                 </div>
               </div>
             )}

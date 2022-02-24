@@ -65,8 +65,26 @@ class JobsList extends Component {
     const { jobs } = this.props;
 
     return (
+
+
       <div className="list row">
         <div className="col-md-8">
+
+        <div class=" bg-white shadow=xl mb-10">
+    <div class="container  flex items-center px-4 sm:px-6 lg:px-8  ml-20 pl-10 ">
+        <div class="relative item-center justify-center"> 
+        <input 
+        type="text" 
+        class="h-14 w-96 pr-8 pl-5 rounded z-0 focus:shadow  shadow-xl focus:outline-none items-center" 
+        placeholder="Search anything..."
+        value={searchTitle}
+        onChange={this.onChangeSearchTitle}/>
+            <div class="absolute top-4 right-20">   <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></div>
+        </div>
+    </div>
+</div>
+
+{/* 
           <div className="input-group mb-3">
             <input
               type="text"
@@ -84,10 +102,13 @@ class JobsList extends Component {
                                 Search
                               </button>
                             </div> */}{" "}
-          </div>{" "}
+          {/* </div>{" "} */}
         </div>{" "}
-        <div className="col-md-6">
-          <h4> Jobs List </h4>
+
+        <div className="flex justify-evenly">
+
+        <div className="col-md-6 ml-10">
+          <h4 className="font-bold text-3xl text-primary mb-5"> Jobs List </h4>
           <ul className="list-group">
             {" "}
             {jobs &&
@@ -97,51 +118,54 @@ class JobsList extends Component {
                     _job.title != null && _job.title.includes(this.state.searchTitle)
                 )
                 .map((job, index) => (
-                  <li
+
+                  <div className="mb-5 text-xl border-b-2 pb-3">
+                      <li
                     className={
                       "list-group-item " +
-                      (index === currentIndex ? "active" : "")
+                      (index === currentIndex ? "active" : "") 
                     }
                     onClick={() => this.setActiveJob(job, index)}
                     key={index}
                   >
                     {job.title}{" "}
                   </li>
+                < p className="text-primary text-sm">#Job #Apply</p> 
+                  </div>
+                  
                 ))}{" "}
           </ul>
-          <button
-            className="m-3 btn btn-sm btn-danger"
-            onClick={this.removeAllJobs}
-          >
-            Remove All{" "}
-          </button>{" "}
         </div>{" "}
         <div className="col-md-6">
           {" "}
           {currentJob ? (
             <div>
-              <h4> Job </h4>{" "}
+              <h4 className='text-primary text-3xl' > Job </h4>{" "}
               <div>
                 <label>
-                  <strong> Title: </strong>{" "}
+                  <strong className="text-2xl"> Title: </strong>{" "}
                 </label>{" "}
-                {currentJob.title}{" "}
+                <p className="text-xl">{currentJob.title}{" "}</p>
+                
               </div>{" "}
               <div>
                 <label>
-                  <strong> Description: </strong>{" "}
+                  <strong className="text-2xl"> Description: </strong>{" "}
                 </label>{" "}
+                <p className="text-xl mb-3">
                 {currentJob.job_desc}{" "}
+                </p>
+               
               </div>{" "}
-              <div>
+              {/* <div>
                 <label>
                   <strong> Status: </strong>{" "}
                 </label>{" "}
                 {currentJob.published ? "Published" : "Pending"}{" "}
-              </div>
+              </div> */}
               <Link
                 to={"/jobs/" + currentJob.job_id}
-                className="badge badge-warning"
+                className=" mr-2 mt-3 p-2 text-primary border-solid border-2 border-primary rounded-md hover:bg-primary hover:text-white transition ease-out"
               >
                 Edit{" "}
               </Link>{" "}
@@ -153,6 +177,7 @@ class JobsList extends Component {
             </div>
           )}{" "}
         </div>{" "}
+      </div>
       </div>
     );
   }

@@ -140,7 +140,7 @@ class Application extends Component {
         {" "}
         {currentJob ? (
           <div className="edit-form">
-            <h4> Job </h4>{" "}
+            <h4 className="font-bold"> Job </h4>{" "}
             <form>
               <div className="form-group">
                 <label htmlFor="title"> Title </label>{" "}
@@ -170,7 +170,7 @@ class Application extends Component {
               </div>{" "}
             </form>{" "}
             {currentJob.published ? (
-              <button
+              <button 
                 className="badge badge-primary mr-2"
                 onClick={() => this.updateStatus(false)}
               >
@@ -178,21 +178,21 @@ class Application extends Component {
               </button>
             ) : (
               <button
-                className="badge badge-primary mr-2"
+                className="bg-yellow-900 text-white"
                 onClick={() => this.updateStatus(true)}
               >
                 Publish{" "}
               </button>
             )}{" "}
             <button
-              className="badge badge-danger mr-2"
+              className="bg-primary text-white"
               onClick={this.removeJob}
             >
               Delete{" "}
             </button>{" "}
             <button
               type="submit"
-              className="badge badge-success"
+              className="bg-primary text-white"
               onClick={this.updateContent}
             >
               Update{" "}

@@ -14,8 +14,7 @@ function Contact() {
               <input
                 type="text"
                 placeholder="Your Name"
-                class="ring-1 ring-gray-300 w-full
-    rounded - md px - 4 py - 2 outline - none focus: ring - 2 focus: ring - primary "
+                className="ring-1 ring-gray-300 w-full rounded - md px - 4 py - 2 outline - none focus: ring - 2 focus: ring - primary "
               ></input>{" "}
             </div>{" "}
             <div class="mb-5">

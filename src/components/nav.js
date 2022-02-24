@@ -19,13 +19,13 @@ const Nav =(props)=>{
       
     return (
            <div>
-               <nav className= "fixed flex w-full justify-between pt-5 pl-3 pb-5 shadow-md bg-white">
+               <nav className= "flex w-full justify-between pt-5 pl-3 pb-5 shadow-md bg-white">
                <span>
                    <Link to='/'>
                    <img src={molto} className='w-full h-8'></img>
                    </Link>
                </span>
-               <ul className='flex justify-evenly   font-Asap text-gray-600'>
+               <ul className='flex justify-evenly font-Asap text-gray-600'>
                    {/* <Link to="/" class="">
                    <li className='hover:text-primary'>Home</li>
                    </Link> */}
